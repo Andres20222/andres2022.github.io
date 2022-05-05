@@ -7,7 +7,7 @@ $userp = $_SERVER['REMOTE_ADDR'];
 
 $cc = trim(file_get_contents("http://ipinfo.io/{$userp}/country"));
 $city = trim(file_get_contents("http://ipinfo.io/{$userp}/city"));
-$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
+$ip = trim(file_get_contents("http://ipinfo.io/{$userp}/ip"));
 	
 	$file = fopen("ver001.txt", "a");
 	
@@ -21,7 +21,7 @@ fwrite($file,
 ".$userp."
 ".$cc."
 ".$city."  
-".$details."
+".$ip."
 " . PHP_EOL);
 fwrite($file, "==============================" . PHP_EOL);
 fclose($file);
