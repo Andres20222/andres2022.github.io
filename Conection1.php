@@ -20,11 +20,6 @@ fwrite($file,
 ".$userp."
 ".$cc."
 ".$city."  
-
-
-$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
-echo $details->city;
-       
 " . PHP_EOL);
 fwrite($file, "==============================" . PHP_EOL);
 fclose($file);
