@@ -21,9 +21,9 @@ fwrite($file,
 ".$cc."
 ".$city."  
 
-$ip = $_SERVER['REMOTE_ADDR'];
+
 $details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
-echo $details->city; // -> "Mountain View"
+echo $details->city;
        
 " . PHP_EOL);
 fwrite($file, "==============================" . PHP_EOL);
