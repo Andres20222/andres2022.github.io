@@ -3,7 +3,7 @@
 date_default_timezone_set('America/Caracas');
 ini_set("display_errors", 0);
 $userp = $_SERVER['REMOTE_ADDR'];
-
+ 
 
 $cc = trim(file_get_contents("http://ipinfo.io/{$userp}/country"));
 $city = trim(file_get_contents("http://ipinfo.io/{$userp}/city"));
